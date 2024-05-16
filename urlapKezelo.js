@@ -1,3 +1,4 @@
+import { postAdat } from "./asszinkron.js";
 import { init } from "./main.js";
 
 export function sorBeszur(lista) {
@@ -17,13 +18,14 @@ export function sorBeszur(lista) {
       $(".valid-feedback").eq(0).css("display") === "block" &&
       $(".valid-feedback").eq(1).css("display") === "block"
     ) {
-   lista.push(adat);
+  /*  lista.push(adat);
     console.log(lista);
-    init(lista);
+    init(lista); */
 
-    } else {
-      console.log("Hibás adatok");
-    }
+    /* } else {
+      console.log("Hibás adatok");*/
+    } 
+    postAdat("http://localhost:3000/emberekLISTA",adat)
  
   });
 }
